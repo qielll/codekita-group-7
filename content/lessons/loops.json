@@ -1,0 +1,17 @@
+{
+  "id": "loops",
+  "concept": "loops",
+  "title": "2. Loops — Repeat Without Rewriting",
+  "level": "SD-SMA intro",
+  "explanation": "A for loop repeats a block a set number of times. Use it instead of copying the same line again and again.",
+  "example": {
+    "description": "Print Hello 3 times",
+    "code": "for i in range(3):\n    print('Hello')",
+    "expected_stdout": "Hello\nHello\nHello"
+  },
+  "exercise_ids": [
+    "loop-1",
+    "loop-2",
+    "loop-3"
+  ]
+}

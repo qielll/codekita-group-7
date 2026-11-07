@@ -1,0 +1,29 @@
+{
+  "concept": "conditionals",
+  "exercises": [
+    {
+      "id": "cond-1",
+      "concept": "conditionals",
+      "difficulty": 1,
+      "prompt": "Set x = 10. If x is greater than 5 print 'Big', otherwise print 'Small'.",
+      "tests": [
+        {
+          "stdin": "",
+          "expected_stdout": "Big"
+        }
+      ]
+    },
+    {
+      "id": "cond-2",
+      "concept": "conditionals",
+      "difficulty": 2,
+      "prompt": "Set age = 12. If age is 18 or more print 'Adult', otherwise print 'Young'.",
+      "tests": [
+        {
+          "stdin": "",
+          "expected_stdout": "Young"
+        }
+      ]
+    }
+  ]
+}

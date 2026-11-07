@@ -1,0 +1,41 @@
+{
+  "concept": "variables",
+  "exercises": [
+    {
+      "id": "var-1",
+      "concept": "variables",
+      "difficulty": 1,
+      "prompt": "Store 7 in a variable called n, then print n.",
+      "tests": [
+        {
+          "stdin": "",
+          "expected_stdout": "7"
+        }
+      ]
+    },
+    {
+      "id": "var-2",
+      "concept": "variables",
+      "difficulty": 2,
+      "prompt": "Store your name 'Kita' in a variable, then print 'Hello, ' followed by the name (one line: Hello, Kita).",
+      "tests": [
+        {
+          "stdin": "",
+          "expected_stdout": "Hello, Kita"
+        }
+      ]
+    },
+    {
+      "id": "var-3",
+      "concept": "variables",
+      "difficulty": 3,
+      "prompt": "Set a = 4 and b = 6, then print their product (a times b).",
+      "tests": [
+        {
+          "stdin": "",
+          "expected_stdout": "24"
+        }
+      ]
+    }
+  ]
+}

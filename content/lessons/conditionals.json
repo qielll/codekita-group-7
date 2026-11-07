@@ -1,0 +1,16 @@
+{
+  "id": "conditionals",
+  "concept": "conditionals",
+  "title": "3. Conditionals — Making Choices",
+  "level": "SMP-SMA",
+  "explanation": "An if/else lets the program choose. If the condition is true it runs one branch, otherwise it runs the other.",
+  "example": {
+    "description": "Check a fixed score",
+    "code": "score = 80\nif score >= 60:\n    print('Pass')\nelse:\n    print('Retry')",
+    "expected_stdout": "Pass"
+  },
+  "exercise_ids": [
+    "cond-1",
+    "cond-2"
+  ]
+}

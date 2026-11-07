@@ -1,0 +1,17 @@
+{
+  "id": "variables",
+  "concept": "variables",
+  "title": "4. Variables — Remembering Values",
+  "level": "SMP-SMA",
+  "explanation": "A variable stores a value under a name. You can update it and use it in calculations and printing.",
+  "example": {
+    "description": "Add two numbers stored in variables",
+    "code": "a = 2\nb = 3\nprint(a + b)",
+    "expected_stdout": "5"
+  },
+  "exercise_ids": [
+    "var-1",
+    "var-2",
+    "var-3"
+  ]
+}

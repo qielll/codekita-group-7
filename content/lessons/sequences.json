@@ -1,0 +1,16 @@
+{
+  "id": "sequences",
+  "concept": "sequences",
+  "title": "1. Sequences — Steps in Order",
+  "level": "SD-SMA intro",
+  "explanation": "Programs run instructions from top to bottom, in order. Put the steps in the right order and the computer follows them exactly.",
+  "example": {
+    "description": "Print three lines in order",
+    "code": "print('Ready')\nprint('Set')\nprint('Go!')",
+    "expected_stdout": "Ready\nSet\nGo!"
+  },
+  "exercise_ids": [
+    "seq-1",
+    "seq-2"
+  ]
+}

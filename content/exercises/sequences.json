@@ -1,0 +1,29 @@
+{
+  "concept": "sequences",
+  "exercises": [
+    {
+      "id": "seq-1",
+      "concept": "sequences",
+      "difficulty": 1,
+      "prompt": "Print 'First' then 'Second', each on its own line.",
+      "tests": [
+        {
+          "stdin": "",
+          "expected_stdout": "First\nSecond"
+        }
+      ]
+    },
+    {
+      "id": "seq-2",
+      "concept": "sequences",
+      "difficulty": 2,
+      "prompt": "Print the numbers 1, 2, 3 each on its own line using three print blocks in order.",
+      "tests": [
+        {
+          "stdin": "",
+          "expected_stdout": "1\n2\n3"
+        }
+      ]
+    }
+  ]
+}

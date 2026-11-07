@@ -1,0 +1,41 @@
+{
+  "concept": "loops",
+  "exercises": [
+    {
+      "id": "loop-1",
+      "concept": "loops",
+      "difficulty": 1,
+      "prompt": "Use a loop to print 'Ha' 4 times, each on its own line.",
+      "tests": [
+        {
+          "stdin": "",
+          "expected_stdout": "Ha\nHa\nHa\nHa"
+        }
+      ]
+    },
+    {
+      "id": "loop-2",
+      "concept": "loops",
+      "difficulty": 2,
+      "prompt": "Use a loop to print the numbers 0, 1, 2, 3, 4, each on its own line.",
+      "tests": [
+        {
+          "stdin": "",
+          "expected_stdout": "0\n1\n2\n3\n4"
+        }
+      ]
+    },
+    {
+      "id": "loop-3",
+      "concept": "loops",
+      "difficulty": 3,
+      "prompt": "Use a loop to print the counting numbers 1 to 5, each on its own line.",
+      "tests": [
+        {
+          "stdin": "",
+          "expected_stdout": "1\n2\n3\n4\n5"
+        }
+      ]
+    }
+  ]
+}
