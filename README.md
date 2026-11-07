@@ -1,48 +1,49 @@
-# CodeKita — Adaptive Blockly-to-Python Learning Platform (MVP)
+# CodeKita — Platform Belajar Adaptif Blockly-ke-Python (MVP)
 
-A student drags visual blocks → the blocks become Python → the code is
-auto-graded in a sandbox → mastery per concept updates → the next,
-slightly harder/easier exercise is recommended. Scope contract: see
-`MVP_SPEC.md`. Architecture and the adaptive rule: see `ARCHITECTURE.md`.
+Siswa menyeret blok visual → blok tersebut menjadi kode Python → kode
+dinilai secara otomatis di dalam sandbox → tingkat penguasaan per konsep
+diperbarui → latihan berikutnya yang sedikit lebih sulit/mudah
+direkomendasikan. Kontrak cakupan: lihat `MVP_SPEC.md`. Arsitektur dan
+aturan adaptifnya: lihat `ARCHITECTURE.md`.
 
-## Prerequisites
-- **Docker** (required for the grader sandbox — there is no non-Docker
-  fallback for demos)
+## Prasyarat
+- **Docker** (wajib untuk sandbox penilai — tidak ada fallback non-Docker
+  untuk demo)
 - Python 3.12+, Node 20+
 
-## Run it
+## Cara Menjalankan
 ```bash
-# 1) Sandbox image
+# 1) Image sandbox
 docker build -t codekita-sandbox:latest -f grader/sandbox.Dockerfile grader/
 
-# 2) Grader API (terminal 1)
+# 2) API penilai (terminal 1)
 pip install -r grader/requirements.txt
-uvicorn grader.main:app --port 8000        # from the repo root
+uvicorn grader.main:app --port 8000        # dari root repo
 
-# 3) Web app (terminal 2)
+# 3) Aplikasi web (terminal 2)
 cd web && npm install && npm run dev       # http://localhost:5173
 ```
 
-## Tests
+## Pengujian
 ```bash
 pip install fastapi uvicorn pydantic httpx pytest
 python -m pytest tests/ -q
-# On a machine without Docker, tests use the dev-only local sandbox:
+# Di mesin tanpa Docker, pengujian menggunakan sandbox lokal khusus pengembangan:
 CODEKITA_ALLOW_LOCAL_SANDBOX=1 python -m pytest tests/ -q
 ```
 
-## Add a lesson
-1. Add `content/lessons/<id>.json` (explanation, worked example, exercise ids).
-2. Add/extend `content/exercises/<concept>.json` with prompts and hidden
-   test cases (`expected_stdout` per case). No code changes needed.
+## Menambah Pelajaran
+1. Tambahkan `content/lessons/<id>.json` (penjelasan, contoh yang dikerjakan, id latihan).
+2. Tambahkan/perluas `content/exercises/<concept>.json` dengan soal dan
+   kasus uji tersembunyi (`expected_stdout` per kasus). Tidak perlu mengubah kode.
 
-## Demo script (5 minutes)
-1. Open the web app, enter a name/class code (no password).
-2. Lesson 1 → build *First / Second* with two print blocks → watch the
-   Python preview appear → **Run & Grade** → friendly pass feedback.
-3. Submit a wrong solution → friendly fail, no stack trace.
-4. (Grader terminal / API) submit `while True: pass` → it is killed at the
-   2 s limit and reported as a timeout; the server stays up.
-5. Fail the loops exercise twice → the Progress panel shows loops mastery
-   dropping and loops stays the ⭐ recommended concept; pass twice →
-   difficulty steps up and the path advances.
+## Skrip Demo (5 menit)
+1. Buka aplikasi web, masukkan nama/kode kelas (tanpa kata sandi).
+2. Pelajaran 1 → buat *First / Second* dengan dua blok print → lihat
+   pratinjau Python yang muncul → **Run & Grade** → umpan balik lulus yang ramah.
+3. Kirim solusi yang salah → hasil gagal yang ramah, tanpa stack trace.
+4. (Terminal penilai / API) kirim `while True: pass` → kode dihentikan pada
+   batas 2 detik dan dilaporkan sebagai timeout; server tetap berjalan.
+5. Gagal pada latihan loops dua kali → panel Progress menunjukkan penguasaan
+   loops menurun dan loops tetap menjadi konsep yang direkomendasikan ⭐; lulus dua kali →
+   tingkat kesulitan naik dan jalur belajar berlanjut.
